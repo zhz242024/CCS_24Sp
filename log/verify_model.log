@@ -1,0 +1,70 @@
+nohup: ignoring input
+2024-05-31 18:13:49.736257: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2024-05-31 18:13:49.811298: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-05-31 18:13:50.673878: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/ucloud/.local/lib/python3.8/site-packages/torch/cuda/__init__.py:619: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+2024-05-31 18:13:53.807766: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:995] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-31 18:13:53.808297: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:995] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-31 18:13:53.811051: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+/home/ucloud/.local/lib/python3.8/site-packages/accelerate/accelerator.py:401: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+W0531 18:13:53.872874 140014596159296 other.py:349] Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+I0531 18:13:53.873627 140014596159296 main.py:183] {
+    "logtostderr": false,
+    "alsologtostderr": false,
+    "log_dir": "",
+    "v": 0,
+    "verbosity": 0,
+    "logger_levels": {},
+    "stderrthreshold": "fatal",
+    "showprefixforinfo": true,
+    "run_with_pdb": false,
+    "pdb_post_mortem": false,
+    "pdb": false,
+    "run_with_profiling": false,
+    "profile_file": null,
+    "use_cprofile_for_profiling": true,
+    "only_check_args": false,
+    "op_conversion_fallback_to_while_loop": true,
+    "delta_threshold": 0.5,
+    "tt_check_filter": false,
+    "tt_single_core_summaries": false,
+    "runtime_oom_exit": true,
+    "hbm_oom_exit": true,
+    "test_srcdir": "",
+    "test_tmpdir": "/tmp/absl_testing",
+    "test_random_seed": 301,
+    "test_randomize_ordering_seed": "",
+    "xml_output_file": "",
+    "data_dir": null,
+    "feature_output": "text_features.npy",
+    "model_output": "kmeans_model.pkl",
+    "num_clusters": 5,
+    "new_data_dir": null,
+    "model_path": "/home/ucloud/CCS/code/DistillBert/kmeans_model.pkl",
+    "output_log_dir": "~/CCS/code/DistillBert/log",
+    "output_model_dir": "~/CCS/code/DistillBert/saved_model",
+    "task": "verify",
+    "?": false,
+    "help": false,
+    "helpshort": false,
+    "helpfull": false,
+    "helpxml": false
+}
+I0531 18:13:53.873745 140014596159296 main.py:164] Verifying model...
+I0531 18:13:53.875594 140014596159296 main.py:166] Cluster centers:
+[[-0.01628918 -0.01540187 -0.01078942 ... -0.05183446  0.27844515
+   0.2618592 ]
+ [-0.13335021 -0.04527852  0.07101358 ... -0.0785347   0.1967488
+   0.2722276 ]
+ [-0.19103178 -0.04069366  0.16872227 ... -0.07722003  0.2231159
+   0.4309343 ]
+ [ 0.11711709  0.01160146  0.0078352  ... -0.1642107   0.42133158
+   0.25084466]
+ [ 0.03362404  0.00450227 -0.00613101 ... -0.08419776  0.3407331
+   0.28648064]]
+I0531 18:13:53.875731 140014596159296 main.py:167] Inertia: 126855.046875
+I0531 18:13:53.875804 140014596159296 main.py:168] Number of iterations: 56

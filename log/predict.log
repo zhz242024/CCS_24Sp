@@ -1,0 +1,103 @@
+nohup: ignoring input
+2024-06-01 01:59:41.298547: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2024-06-01 01:59:41.376834: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-06-01 01:59:42.643999: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/ucloud/.local/lib/python3.8/site-packages/torch/cuda/__init__.py:619: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+2024-06-01 01:59:46.314110: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:995] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-06-01 01:59:46.314715: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:995] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-06-01 01:59:46.317622: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+/home/ucloud/.local/lib/python3.8/site-packages/accelerate/accelerator.py:401: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+W0601 01:59:46.399910 140593488594752 other.py:349] Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+I0601 01:59:46.400960 140593488594752 main.py:283] {
+    "logtostderr": false,
+    "alsologtostderr": false,
+    "log_dir": "",
+    "v": 0,
+    "verbosity": 0,
+    "logger_levels": {},
+    "stderrthreshold": "fatal",
+    "showprefixforinfo": true,
+    "run_with_pdb": false,
+    "pdb_post_mortem": false,
+    "pdb": false,
+    "run_with_profiling": false,
+    "profile_file": null,
+    "use_cprofile_for_profiling": true,
+    "only_check_args": false,
+    "op_conversion_fallback_to_while_loop": true,
+    "delta_threshold": 0.5,
+    "tt_check_filter": false,
+    "tt_single_core_summaries": false,
+    "runtime_oom_exit": true,
+    "hbm_oom_exit": true,
+    "test_srcdir": "",
+    "test_tmpdir": "/tmp/absl_testing",
+    "test_random_seed": 301,
+    "test_randomize_ordering_seed": "",
+    "xml_output_file": "",
+    "data_dir": null,
+    "feature_output": "text_features.npy",
+    "model_output": "kmeans_model.pkl",
+    "num_clusters": 5,
+    "new_data_dir": "/home/ucloud/CCS/DATASET/test",
+    "model_path": "/home/ucloud/CCS/code/DistillBert/distilbert_model",
+    "output_log_dir": "~/CCS/code/DistillBert/log",
+    "output_model_dir": "~/CCS/code/DistillBert/saved_model",
+    "task": "predict",
+    "prediction_output": "predictions.csv",
+    "epochs": 3,
+    "learning_rate": 5e-05,
+    "dev_data_dir": null,
+    "label_file": "/home/ucloud/CCS/full_test_split.csv",
+    "?": false,
+    "help": false,
+    "helpshort": false,
+    "helpfull": false,
+    "helpxml": false
+}
+I0601 01:59:46.401175 140593488594752 main.py:200] Starting prediction...
+All model checkpoint layers were used when initializing TFDistilBertForSequenceClassification.
+
+All the layers of TFDistilBertForSequenceClassification were initialized from the model checkpoint at /home/ucloud/CCS/code/DistillBert/distilbert_model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertForSequenceClassification for predictions without further training.
+  0%|          | 0/47 [00:00<?, ?it/s]I0601 01:59:47.906127 140593488594752 main.py:225] Processing file: /home/ucloud/CCS/DATASET/test/373_P/373_TRANSCRIPT.csv
+I0601 01:59:47.908754 140593488594752 main.py:51] Loaded data from /home/ucloud/CCS/DATASET/test/373_P/373_TRANSCRIPT.csv with shape (261, 4)
+I0601 01:59:47.910389 140593488594752 main.py:53] Cleaned data shape (only 'Participant' speaker): (193, 4)
+I0601 01:59:47.920562 140593488594752 main.py:54] First few rows of cleaned data:     start_time  stop_time      speaker                     value
+0        21.36      22.31  Participant                   <synch>
+2        64.19      64.78  Participant                       yes
+5        70.06      71.93  Participant  uh doing okay doing okay
+8        75.65      76.72  Participant         uh north carolina
+10       80.17      80.36  Participant                       yep
+  0%|          | 0/47 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/ucloud/.local/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 3653, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'PHQ8_Score'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "main.py", line 305, in <module>
+    app.run(main)
+  File "/home/ucloud/.local/lib/python3.8/site-packages/absl/app.py", line 308, in run
+    _run_main(main, args)
+  File "/home/ucloud/.local/lib/python3.8/site-packages/absl/app.py", line 254, in _run_main
+    sys.exit(main(argv))
+  File "main.py", line 295, in main
+    predict(FLAGS.new_data_dir, FLAGS.model_path, FLAGS.label_file)
+  File "main.py", line 236, in predict
+    score = labels_df[labels_df['Participant_ID'] == participant_id]['PHQ8_Score'].values[0]
+  File "/home/ucloud/.local/lib/python3.8/site-packages/pandas/core/frame.py", line 3761, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/home/ucloud/.local/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 3655, in get_loc
+    raise KeyError(key) from err
+KeyError: 'PHQ8_Score'

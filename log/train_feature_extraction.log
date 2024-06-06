@@ -1,0 +1,500 @@
+nohup: ignoring input
+2024-05-31 17:43:49.980251: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2024-05-31 17:43:50.055506: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-05-31 17:43:50.909650: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/ucloud/.local/lib/python3.8/site-packages/torch/cuda/__init__.py:619: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+2024-05-31 17:43:54.145938: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:995] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-31 17:43:54.146615: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:995] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-31 17:43:54.149958: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+/home/ucloud/.local/lib/python3.8/site-packages/accelerate/accelerator.py:401: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+W0531 17:43:54.201808 140198850742080 other.py:349] Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+I0531 17:43:54.202794 140198850742080 main.py:177] {
+    "logtostderr": false,
+    "alsologtostderr": false,
+    "log_dir": "",
+    "v": 0,
+    "verbosity": 0,
+    "logger_levels": {},
+    "stderrthreshold": "fatal",
+    "showprefixforinfo": true,
+    "run_with_pdb": false,
+    "pdb_post_mortem": false,
+    "pdb": false,
+    "run_with_profiling": false,
+    "profile_file": null,
+    "use_cprofile_for_profiling": true,
+    "only_check_args": false,
+    "op_conversion_fallback_to_while_loop": true,
+    "delta_threshold": 0.5,
+    "tt_check_filter": false,
+    "tt_single_core_summaries": false,
+    "runtime_oom_exit": true,
+    "hbm_oom_exit": true,
+    "test_srcdir": "",
+    "test_tmpdir": "/tmp/absl_testing",
+    "test_random_seed": 301,
+    "test_randomize_ordering_seed": "",
+    "xml_output_file": "",
+    "data_dir": "~/CCS/DATASET/train",
+    "feature_output": "~/CCS/code/DistillBert/train_features.npy",
+    "model_output": "kmeans_model.pkl",
+    "num_clusters": 5,
+    "new_data_dir": null,
+    "model_path": "kmeans_model.pkl",
+    "output_log_dir": "~/CCS/code/DistillBert/log",
+    "output_model_dir": "~/CCS/code/DistillBert/saved_model",
+    "task": "extract",
+    "?": false,
+    "help": false,
+    "helpshort": false,
+    "helpfull": false,
+    "helpxml": false
+}
+I0531 17:43:54.202973 140198850742080 main.py:65] Starting feature extraction...
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_projector.bias', 'vocab_transform.bias', 'vocab_transform.weight', 'vocab_layer_norm.weight', 'vocab_layer_norm.bias']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+I0531 17:43:55.792165 140198850742080 main.py:74] Processing data directory: /home/ucloud/CCS/DATASET/train
+  0%|          | 0/107 [00:00<?, ?it/s]I0531 17:43:55.794142 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/485_P
+I0531 17:43:55.794294 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/485_P/485_TRANSCRIPT.csv
+I0531 17:43:55.799179 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/485_P/485_TRANSCRIPT.csv with shape (167, 4)
+I0531 17:43:55.800693 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (91, 4)
+2024-05-31 17:43:57.111813: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 143130624 exceeds 10% of free system memory.
+2024-05-31 17:43:57.183024: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 143130624 exceeds 10% of free system memory.
+2024-05-31 17:43:57.218143: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 143130624 exceeds 10% of free system memory.
+2024-05-31 17:43:57.256491: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 143130624 exceeds 10% of free system memory.
+2024-05-31 17:43:57.287820: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 143130624 exceeds 10% of free system memory.
+  1%|          | 1/107 [00:06<11:24,  6.46s/it]I0531 17:44:02.250626 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/351_P
+I0531 17:44:02.250908 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/351_P/351_TRANSCRIPT.csv
+I0531 17:44:02.254288 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/351_P/351_TRANSCRIPT.csv with shape (207, 4)
+I0531 17:44:02.255458 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (118, 4)
+  2%|▏         | 2/107 [00:13<11:57,  6.83s/it]I0531 17:44:09.348549 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/488_P
+I0531 17:44:09.348821 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/488_P/488_TRANSCRIPT.csv
+I0531 17:44:09.351969 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/488_P/488_TRANSCRIPT.csv with shape (202, 4)
+I0531 17:44:09.352970 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (138, 4)
+  3%|▎         | 3/107 [00:21<13:03,  7.53s/it]I0531 17:44:17.714700 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/400_P
+I0531 17:44:17.714973 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/400_P/400_TRANSCRIPT.csv
+I0531 17:44:17.718003 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/400_P/400_TRANSCRIPT.csv with shape (232, 4)
+I0531 17:44:17.719040 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (149, 4)
+  4%|▎         | 4/107 [00:30<13:21,  7.78s/it]I0531 17:44:25.867228 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/454_P
+I0531 17:44:25.867443 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/454_P/454_TRANSCRIPT.csv
+I0531 17:44:25.869502 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/454_P/454_TRANSCRIPT.csv with shape (230, 4)
+I0531 17:44:25.870131 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (125, 4)
+  5%|▍         | 5/107 [00:37<12:55,  7.61s/it]I0531 17:44:33.171292 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/393_P
+I0531 17:44:33.171634 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/393_P/393_TRANSCRIPT.csv
+I0531 17:44:33.174598 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/393_P/393_TRANSCRIPT.csv with shape (162, 4)
+I0531 17:44:33.175631 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (97, 4)
+  6%|▌         | 6/107 [00:43<11:48,  7.02s/it]I0531 17:44:39.042150 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/324_P
+I0531 17:44:39.042588 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/324_P/324_TRANSCRIPT.csv
+I0531 17:44:39.046658 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/324_P/324_TRANSCRIPT.csv with shape (256, 4)
+I0531 17:44:39.047852 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (164, 4)
+  7%|▋         | 7/107 [00:51<12:33,  7.53s/it]I0531 17:44:47.641733 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/370_P
+I0531 17:44:47.642063 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/370_P/370_TRANSCRIPT.csv
+I0531 17:44:47.645087 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/370_P/370_TRANSCRIPT.csv with shape (213, 4)
+I0531 17:44:47.645903 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (157, 4)
+  7%|▋         | 8/107 [01:00<12:57,  7.85s/it]I0531 17:44:56.180316 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/353_P
+I0531 17:44:56.180655 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/353_P/353_TRANSCRIPT.csv
+I0531 17:44:56.184073 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/353_P/353_TRANSCRIPT.csv with shape (196, 4)
+I0531 17:44:56.185209 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (116, 4)
+  8%|▊         | 9/107 [01:07<12:24,  7.60s/it]I0531 17:45:03.227916 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/371_P
+I0531 17:45:03.228193 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/371_P/371_TRANSCRIPT.csv
+I0531 17:45:03.231322 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/371_P/371_TRANSCRIPT.csv with shape (233, 4)
+I0531 17:45:03.232380 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (147, 4)
+  9%|▉         | 10/107 [01:15<12:40,  7.84s/it]I0531 17:45:11.585092 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/345_P
+I0531 17:45:11.585330 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/345_P/345_TRANSCRIPT.csv
+I0531 17:45:11.587340 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/345_P/345_TRANSCRIPT.csv with shape (179, 4)
+I0531 17:45:11.587985 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (103, 4)
+ 10%|█         | 11/107 [01:21<11:25,  7.14s/it]I0531 17:45:17.134163 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/339_P
+I0531 17:45:17.134853 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/339_P/339_TRANSCRIPT.csv
+I0531 17:45:17.136881 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/339_P/339_TRANSCRIPT.csv with shape (233, 4)
+I0531 17:45:17.137528 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (138, 4)
+ 11%|█         | 12/107 [01:29<11:38,  7.36s/it]I0531 17:45:24.999701 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/320_P
+I0531 17:45:24.999909 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/320_P/320_TRANSCRIPT.csv
+I0531 17:45:25.002029 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/320_P/320_TRANSCRIPT.csv with shape (280, 4)
+I0531 17:45:25.002804 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (159, 4)
+ 12%|█▏        | 13/107 [01:38<12:14,  7.81s/it]I0531 17:45:33.860684 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/425_P
+I0531 17:45:33.861113 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/425_P/425_TRANSCRIPT.csv
+I0531 17:45:33.863421 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/425_P/425_TRANSCRIPT.csv with shape (267, 4)
+I0531 17:45:33.864177 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (198, 4)
+ 13%|█▎        | 14/107 [01:49<13:37,  8.79s/it]I0531 17:45:44.917963 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/343_P
+I0531 17:45:44.918195 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/343_P/343_TRANSCRIPT.csv
+I0531 17:45:44.921819 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/343_P/343_TRANSCRIPT.csv with shape (238, 4)
+I0531 17:45:44.923119 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (127, 4)
+ 14%|█▍        | 15/107 [01:56<12:42,  8.29s/it]I0531 17:45:52.038608 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/434_P
+I0531 17:45:52.038814 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/434_P/434_TRANSCRIPT.csv
+I0531 17:45:52.041027 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/434_P/434_TRANSCRIPT.csv with shape (303, 4)
+I0531 17:45:52.041693 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (228, 4)
+ 15%|█▍        | 16/107 [02:08<14:15,  9.40s/it]I0531 17:46:04.134813 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/366_P
+I0531 17:46:04.174312 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/366_P/366_TRANSCRIPT.csv
+I0531 17:46:04.178677 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/366_P/366_TRANSCRIPT.csv with shape (356, 4)
+I0531 17:46:04.264447 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (286, 4)
+ 16%|█▌        | 17/107 [02:24<17:00, 11.34s/it]I0531 17:46:19.879746 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/316_P
+I0531 17:46:19.880053 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/316_P/316_TRANSCRIPT.csv
+I0531 17:46:19.882444 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/316_P/316_TRANSCRIPT.csv with shape (239, 4)
+I0531 17:46:19.883179 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (136, 4)
+ 17%|█▋        | 18/107 [02:31<15:08, 10.20s/it]I0531 17:46:27.431262 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/327_P
+I0531 17:46:27.431541 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/327_P/327_TRANSCRIPT.csv
+I0531 17:46:27.434389 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/327_P/327_TRANSCRIPT.csv with shape (175, 4)
+I0531 17:46:27.435266 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (75, 4)
+ 18%|█▊        | 19/107 [02:34<11:53,  8.11s/it]I0531 17:46:30.665407 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/463_P
+I0531 17:46:30.665738 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/463_P/463_TRANSCRIPT.csv
+I0531 17:46:30.668975 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/463_P/463_TRANSCRIPT.csv with shape (199, 4)
+I0531 17:46:30.670032 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (119, 4)
+ 19%|█▊        | 20/107 [02:40<10:30,  7.25s/it]I0531 17:46:35.915773 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/459_P
+I0531 17:46:35.916099 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/459_P/459_TRANSCRIPT.csv
+I0531 17:46:35.919183 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/459_P/459_TRANSCRIPT.csv with shape (270, 4)
+I0531 17:46:35.920127 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (179, 4)
+ 20%|█▉        | 21/107 [02:50<11:35,  8.08s/it]I0531 17:46:45.938532 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/449_P
+I0531 17:46:45.938892 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/449_P/449_TRANSCRIPT.csv
+I0531 17:46:45.942148 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/449_P/449_TRANSCRIPT.csv with shape (224, 4)
+I0531 17:46:45.943232 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (163, 4)
+ 21%|██        | 22/107 [02:59<11:55,  8.42s/it]I0531 17:46:55.129814 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/401_P
+I0531 17:46:55.130036 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/401_P/401_TRANSCRIPT.csv
+I0531 17:46:55.132196 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/401_P/401_TRANSCRIPT.csv with shape (260, 4)
+I0531 17:46:55.132855 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (182, 4)
+ 21%|██▏       | 23/107 [03:09<12:20,  8.82s/it]I0531 17:47:04.887834 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/468_P
+I0531 17:47:04.888329 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/468_P/468_TRANSCRIPT.csv
+I0531 17:47:04.891881 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/468_P/468_TRANSCRIPT.csv with shape (255, 4)
+I0531 17:47:04.892979 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (187, 4)
+ 22%|██▏       | 24/107 [03:20<13:07,  9.49s/it]I0531 17:47:15.945210 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/448_P
+I0531 17:47:15.945481 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/448_P/448_TRANSCRIPT.csv
+I0531 17:47:15.948734 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/448_P/448_TRANSCRIPT.csv with shape (301, 4)
+I0531 17:47:15.949789 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (246, 4)
+ 23%|██▎       | 25/107 [03:32<14:16, 10.44s/it]I0531 17:47:28.616168 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/456_P
+I0531 17:47:28.616510 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/456_P/456_TRANSCRIPT.csv
+I0531 17:47:28.620057 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/456_P/456_TRANSCRIPT.csv with shape (208, 4)
+I0531 17:47:28.621160 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (132, 4)
+ 24%|██▍       | 26/107 [03:40<13:03,  9.67s/it]I0531 17:47:36.469749 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/430_P
+I0531 17:47:36.470092 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/430_P/430_TRANSCRIPT.csv
+I0531 17:47:36.474191 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/430_P/430_TRANSCRIPT.csv with shape (231, 4)
+I0531 17:47:36.475390 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (155, 4)
+ 25%|██▌       | 27/107 [03:49<12:41,  9.52s/it]I0531 17:47:45.640985 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/362_P
+I0531 17:47:45.641357 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/362_P/362_TRANSCRIPT.csv
+I0531 17:47:45.644787 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/362_P/362_TRANSCRIPT.csv with shape (129, 4)
+I0531 17:47:45.645942 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (78, 4)
+ 26%|██▌       | 28/107 [03:53<10:11,  7.74s/it]I0531 17:47:49.219972 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/385_P
+I0531 17:47:49.220299 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/385_P/385_TRANSCRIPT.csv
+I0531 17:47:49.223366 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/385_P/385_TRANSCRIPT.csv with shape (125, 4)
+I0531 17:47:49.224395 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (55, 4)
+ 27%|██▋       | 29/107 [03:56<08:03,  6.21s/it]I0531 17:47:51.851995 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/409_P
+I0531 17:47:51.852303 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/409_P/409_TRANSCRIPT.csv
+I0531 17:47:51.856081 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/409_P/409_TRANSCRIPT.csv with shape (334, 4)
+I0531 17:47:51.857295 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (275, 4)
+E0531 17:47:51.962931 140198850742080 main.py:93] Error processing /home/ucloud/CCS/DATASET/train/409_P/409_TRANSCRIPT.csv: Input is not valid. Should be a string, a list/tuple of strings or a list/tuple of integers.
+ 28%|██▊       | 30/107 [03:56<05:37,  4.38s/it]I0531 17:47:51.963315 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/363_P
+I0531 17:47:51.963456 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/363_P/363_TRANSCRIPT.csv
+I0531 17:47:51.965801 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/363_P/363_TRANSCRIPT.csv with shape (230, 4)
+I0531 17:47:51.966647 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (164, 4)
+ 29%|██▉       | 31/107 [04:04<06:53,  5.43s/it]I0531 17:47:59.866648 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/368_P
+I0531 17:47:59.866871 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/368_P/368_TRANSCRIPT.csv
+I0531 17:47:59.869548 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/368_P/368_TRANSCRIPT.csv with shape (314, 4)
+I0531 17:47:59.870314 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (246, 4)
+ 30%|██▉       | 32/107 [04:17<09:56,  7.95s/it]I0531 17:48:13.678031 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/433_P
+I0531 17:48:13.678372 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/433_P/433_TRANSCRIPT.csv
+I0531 17:48:13.681854 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/433_P/433_TRANSCRIPT.csv with shape (235, 4)
+I0531 17:48:13.682976 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (150, 4)
+ 31%|███       | 33/107 [04:26<10:08,  8.23s/it]I0531 17:48:22.561349 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/330_P
+I0531 17:48:22.561554 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/330_P/330_TRANSCRIPT.csv
+I0531 17:48:22.563997 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/330_P/330_TRANSCRIPT.csv with shape (203, 4)
+I0531 17:48:22.564739 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (114, 4)
+ 32%|███▏      | 34/107 [04:33<09:30,  7.81s/it]I0531 17:48:29.397757 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/491_P
+I0531 17:48:29.398102 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/491_P/491_TRANSCRIPT.csv
+I0531 17:48:29.401618 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/491_P/491_TRANSCRIPT.csv with shape (231, 4)
+I0531 17:48:29.402721 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (146, 4)
+ 33%|███▎      | 35/107 [04:42<09:47,  8.16s/it]I0531 17:48:38.362917 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/355_P
+I0531 17:48:38.363296 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/355_P/355_TRANSCRIPT.csv
+I0531 17:48:38.366882 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/355_P/355_TRANSCRIPT.csv with shape (178, 4)
+I0531 17:48:38.367965 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (101, 4)
+ 34%|███▎      | 36/107 [04:48<09:00,  7.61s/it]I0531 17:48:44.683034 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/437_P
+I0531 17:48:44.683373 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/437_P/437_TRANSCRIPT.csv
+I0531 17:48:44.686832 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/437_P/437_TRANSCRIPT.csv with shape (219, 4)
+I0531 17:48:44.687939 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (141, 4)
+ 35%|███▍      | 37/107 [04:57<09:10,  7.86s/it]I0531 17:48:53.130085 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/317_P
+I0531 17:48:53.130310 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/317_P/317_TRANSCRIPT.csv
+I0531 17:48:53.132363 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/317_P/317_TRANSCRIPT.csv with shape (198, 4)
+I0531 17:48:53.133082 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (112, 4)
+ 36%|███▌      | 38/107 [05:03<08:33,  7.45s/it]I0531 17:48:59.622935 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/340_P
+I0531 17:48:59.623209 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/340_P/340_TRANSCRIPT.csv
+I0531 17:48:59.626191 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/340_P/340_TRANSCRIPT.csv with shape (152, 4)
+I0531 17:48:59.627271 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (68, 4)
+ 36%|███▋      | 39/107 [05:06<06:59,  6.16s/it]I0531 17:49:02.782536 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/325_P
+I0531 17:49:02.782824 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/325_P/325_TRANSCRIPT.csv
+I0531 17:49:02.785852 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/325_P/325_TRANSCRIPT.csv with shape (178, 4)
+I0531 17:49:02.786865 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (94, 4)
+ 37%|███▋      | 40/107 [05:11<06:22,  5.70s/it]I0531 17:49:07.414249 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/419_P
+I0531 17:49:07.414516 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/419_P/419_TRANSCRIPT.csv
+I0531 17:49:07.417424 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/419_P/419_TRANSCRIPT.csv with shape (248, 4)
+I0531 17:49:07.418332 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (185, 4)
+ 38%|███▊      | 41/107 [05:20<07:23,  6.73s/it]I0531 17:49:16.524346 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/416_P
+I0531 17:49:16.524551 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/416_P/416_TRANSCRIPT.csv
+I0531 17:49:16.526689 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/416_P/416_TRANSCRIPT.csv with shape (250, 4)
+I0531 17:49:16.527333 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (164, 4)
+ 39%|███▉      | 42/107 [05:28<07:37,  7.04s/it]I0531 17:49:24.312129 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/376_P
+I0531 17:49:24.312386 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/376_P/376_TRANSCRIPT.csv
+I0531 17:49:24.315437 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/376_P/376_TRANSCRIPT.csv with shape (273, 4)
+I0531 17:49:24.316380 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (200, 4)
+ 40%|████      | 43/107 [05:38<08:34,  8.04s/it]I0531 17:49:34.680632 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/338_P
+I0531 17:49:34.680908 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/338_P/338_TRANSCRIPT.csv
+I0531 17:49:34.683987 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/338_P/338_TRANSCRIPT.csv with shape (138, 4)
+I0531 17:49:34.685076 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (63, 4)
+ 41%|████      | 44/107 [05:41<06:51,  6.53s/it]I0531 17:49:37.668525 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/312_P
+I0531 17:49:37.668796 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/312_P/312_TRANSCRIPT.csv
+I0531 17:49:37.671791 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/312_P/312_TRANSCRIPT.csv with shape (210, 4)
+I0531 17:49:37.672799 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (126, 4)
+ 42%|████▏     | 45/107 [05:48<06:41,  6.48s/it]I0531 17:49:44.051887 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/478_P
+I0531 17:49:44.052275 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/478_P/478_TRANSCRIPT.csv
+I0531 17:49:44.056109 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/478_P/478_TRANSCRIPT.csv with shape (234, 4)
+I0531 17:49:44.057305 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (152, 4)
+ 43%|████▎     | 46/107 [05:56<07:12,  7.08s/it]I0531 17:49:52.540264 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/414_P
+I0531 17:49:52.540533 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/414_P/414_TRANSCRIPT.csv
+I0531 17:49:52.543489 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/414_P/414_TRANSCRIPT.csv with shape (268, 4)
+I0531 17:49:52.544487 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (207, 4)
+ 44%|████▍     | 47/107 [06:07<08:12,  8.20s/it]I0531 17:50:03.345698 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/336_P
+I0531 17:50:03.346032 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/336_P/336_TRANSCRIPT.csv
+I0531 17:50:03.350974 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/336_P/336_TRANSCRIPT.csv with shape (240, 4)
+I0531 17:50:03.352340 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (138, 4)
+ 45%|████▍     | 48/107 [06:14<07:44,  7.87s/it]I0531 17:50:10.459246 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/455_P
+I0531 17:50:10.459519 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/455_P/455_TRANSCRIPT.csv
+I0531 17:50:10.461935 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/455_P/455_TRANSCRIPT.csv with shape (215, 4)
+I0531 17:50:10.462709 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (153, 4)
+ 46%|████▌     | 49/107 [06:22<07:30,  7.77s/it]I0531 17:50:18.000519 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/380_P
+I0531 17:50:18.001030 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/380_P/380_TRANSCRIPT.csv
+I0531 17:50:18.005615 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/380_P/380_TRANSCRIPT.csv with shape (458, 4)
+I0531 17:50:18.006946 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (368, 4)
+ 47%|████▋     | 50/107 [06:40<10:23, 10.94s/it]I0531 17:50:36.310908 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/372_P
+I0531 17:50:36.311272 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/372_P/372_TRANSCRIPT.csv
+I0531 17:50:36.314473 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/372_P/372_TRANSCRIPT.csv with shape (417, 4)
+I0531 17:50:36.315329 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (328, 4)
+ 48%|████▊     | 51/107 [06:55<11:27, 12.27s/it]I0531 17:50:51.707414 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/319_P
+I0531 17:50:51.707741 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/319_P/319_TRANSCRIPT.csv
+I0531 17:50:51.711211 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/319_P/319_TRANSCRIPT.csv with shape (186, 4)
+I0531 17:50:51.712304 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (107, 4)
+ 49%|████▊     | 52/107 [07:01<09:25, 10.29s/it]I0531 17:50:57.352440 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/364_P
+I0531 17:50:57.353021 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/364_P/364_TRANSCRIPT.csv
+I0531 17:50:57.356291 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/364_P/364_TRANSCRIPT.csv with shape (473, 4)
+I0531 17:50:57.357239 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (386, 4)
+ 50%|████▉     | 53/107 [07:21<11:48, 13.13s/it]I0531 17:51:17.112816 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/473_P
+I0531 17:51:17.113207 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/473_P/473_TRANSCRIPT.csv
+I0531 17:51:17.116281 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/473_P/473_TRANSCRIPT.csv with shape (153, 4)
+I0531 17:51:17.117236 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (68, 4)
+ 50%|█████     | 54/107 [07:24<08:53, 10.07s/it]I0531 17:51:20.057017 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/322_P
+I0531 17:51:20.057403 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/322_P/322_TRANSCRIPT.csv
+I0531 17:51:20.060835 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/322_P/322_TRANSCRIPT.csv with shape (293, 4)
+I0531 17:51:20.061953 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (199, 4)
+ 51%|█████▏    | 55/107 [07:34<08:51, 10.21s/it]I0531 17:51:30.593377 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/475_P
+I0531 17:51:30.593718 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/475_P/475_TRANSCRIPT.csv
+I0531 17:51:30.597151 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/475_P/475_TRANSCRIPT.csv with shape (153, 4)
+I0531 17:51:30.598246 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (88, 4)
+ 52%|█████▏    | 56/107 [07:39<07:17,  8.58s/it]I0531 17:51:35.349432 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/426_P
+I0531 17:51:35.349713 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/426_P/426_TRANSCRIPT.csv
+I0531 17:51:35.352515 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/426_P/426_TRANSCRIPT.csv with shape (303, 4)
+I0531 17:51:35.353366 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (225, 4)
+ 53%|█████▎    | 57/107 [07:50<07:48,  9.37s/it]I0531 17:51:46.573375 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/310_P
+I0531 17:51:46.573700 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/310_P/310_TRANSCRIPT.csv
+I0531 17:51:46.577121 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/310_P/310_TRANSCRIPT.csv with shape (240, 4)
+I0531 17:51:46.578171 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (148, 4)
+ 54%|█████▍    | 58/107 [07:58<07:16,  8.91s/it]I0531 17:51:54.425284 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/392_P
+I0531 17:51:54.425610 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/392_P/392_TRANSCRIPT.csv
+I0531 17:51:54.429156 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/392_P/392_TRANSCRIPT.csv with shape (177, 4)
+I0531 17:51:54.430274 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (102, 4)
+ 55%|█████▌    | 59/107 [08:04<06:20,  7.94s/it]I0531 17:52:00.075923 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/303_P
+I0531 17:52:00.076196 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/303_P/303_TRANSCRIPT.csv
+I0531 17:52:00.079299 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/303_P/303_TRANSCRIPT.csv with shape (191, 4)
+I0531 17:52:00.080301 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (103, 4)
+ 56%|█████▌    | 60/107 [08:10<05:43,  7.31s/it]I0531 17:52:05.941916 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/369_P
+I0531 17:52:05.942257 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/369_P/369_TRANSCRIPT.csv
+I0531 17:52:05.945868 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/369_P/369_TRANSCRIPT.csv with shape (288, 4)
+I0531 17:52:05.946991 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (220, 4)
+ 57%|█████▋    | 61/107 [08:21<06:34,  8.57s/it]I0531 17:52:17.446079 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/333_P
+I0531 17:52:17.446429 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/333_P/333_TRANSCRIPT.csv
+I0531 17:52:17.449961 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/333_P/333_TRANSCRIPT.csv with shape (253, 4)
+I0531 17:52:17.451093 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (154, 4)
+ 58%|█████▊    | 62/107 [08:29<06:12,  8.27s/it]I0531 17:52:25.021939 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/318_P
+I0531 17:52:25.022341 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/318_P/318_TRANSCRIPT.csv
+I0531 17:52:25.026091 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/318_P/318_TRANSCRIPT.csv with shape (138, 4)
+I0531 17:52:25.027289 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (68, 4)
+ 59%|█████▉    | 63/107 [08:32<04:54,  6.70s/it]I0531 17:52:28.042047 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/321_P
+I0531 17:52:28.042340 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/321_P/321_TRANSCRIPT.csv
+I0531 17:52:28.045651 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/321_P/321_TRANSCRIPT.csv with shape (233, 4)
+I0531 17:52:28.046543 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (122, 4)
+ 60%|█████▉    | 64/107 [08:37<04:29,  6.26s/it]I0531 17:52:33.280671 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/486_P
+I0531 17:52:33.281222 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/486_P/486_TRANSCRIPT.csv
+I0531 17:52:33.284232 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/486_P/486_TRANSCRIPT.csv with shape (199, 4)
+I0531 17:52:33.285262 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (124, 4)
+ 61%|██████    | 65/107 [08:43<04:16,  6.10s/it]I0531 17:52:39.014749 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/352_P
+I0531 17:52:39.015022 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/352_P/352_TRANSCRIPT.csv
+I0531 17:52:39.018049 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/352_P/352_TRANSCRIPT.csv with shape (136, 4)
+I0531 17:52:39.019073 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (93, 4)
+ 62%|██████▏   | 66/107 [08:47<03:49,  5.59s/it]I0531 17:52:43.421931 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/464_P
+I0531 17:52:43.422256 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/464_P/464_TRANSCRIPT.csv
+I0531 17:52:43.426043 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/464_P/464_TRANSCRIPT.csv with shape (450, 4)
+I0531 17:52:43.427175 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (367, 4)
+ 63%|██████▎   | 67/107 [09:05<06:16,  9.41s/it]I0531 17:53:01.747194 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/397_P
+I0531 17:53:01.747526 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/397_P/397_TRANSCRIPT.csv
+I0531 17:53:01.751204 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/397_P/397_TRANSCRIPT.csv with shape (280, 4)
+I0531 17:53:01.752314 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (191, 4)
+ 64%|██████▎   | 68/107 [09:15<06:08,  9.46s/it]I0531 17:53:11.312456 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/386_P
+I0531 17:53:11.312731 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/386_P/386_TRANSCRIPT.csv
+I0531 17:53:11.315323 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/386_P/386_TRANSCRIPT.csv with shape (268, 4)
+I0531 17:53:11.316051 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (186, 4)
+ 64%|██████▍   | 69/107 [09:24<05:52,  9.29s/it]I0531 17:53:20.196125 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/457_P
+I0531 17:53:20.196394 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/457_P/457_TRANSCRIPT.csv
+I0531 17:53:20.198880 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/457_P/457_TRANSCRIPT.csv with shape (278, 4)
+I0531 17:53:20.199598 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (203, 4)
+ 65%|██████▌   | 70/107 [09:33<05:43,  9.29s/it]I0531 17:53:29.491103 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/487_P
+I0531 17:53:29.491422 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/487_P/487_TRANSCRIPT.csv
+I0531 17:53:29.494026 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/487_P/487_TRANSCRIPT.csv with shape (299, 4)
+I0531 17:53:29.494784 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (225, 4)
+ 66%|██████▋   | 71/107 [09:44<05:50,  9.75s/it]I0531 17:53:40.307862 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/443_P
+I0531 17:53:40.308198 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/443_P/443_TRANSCRIPT.csv
+I0531 17:53:40.311416 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/443_P/443_TRANSCRIPT.csv with shape (198, 4)
+I0531 17:53:40.312430 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (122, 4)
+ 67%|██████▋   | 72/107 [09:50<04:58,  8.52s/it]I0531 17:53:45.952569 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/358_P
+I0531 17:53:45.952861 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/358_P/358_TRANSCRIPT.csv
+I0531 17:53:45.955113 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/358_P/358_TRANSCRIPT.csv with shape (151, 4)
+I0531 17:53:45.955825 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (101, 4)
+ 68%|██████▊   | 73/107 [09:54<04:09,  7.33s/it]I0531 17:53:50.500443 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/479_P
+I0531 17:53:50.500704 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/479_P/479_TRANSCRIPT.csv
+I0531 17:53:50.503466 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/479_P/479_TRANSCRIPT.csv with shape (248, 4)
+I0531 17:53:50.504319 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (151, 4)
+ 69%|██████▉   | 74/107 [10:01<04:00,  7.28s/it]I0531 17:53:57.674839 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/429_P
+I0531 17:53:57.675115 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/429_P/429_TRANSCRIPT.csv
+I0531 17:53:57.678230 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/429_P/429_TRANSCRIPT.csv with shape (310, 4)
+I0531 17:53:57.679275 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (211, 4)
+ 70%|███████   | 75/107 [10:11<04:15,  7.98s/it]I0531 17:54:07.297467 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/446_P
+I0531 17:54:07.297759 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/446_P/446_TRANSCRIPT.csv
+I0531 17:54:07.301083 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/446_P/446_TRANSCRIPT.csv with shape (273, 4)
+I0531 17:54:07.302145 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (212, 4)
+ 71%|███████   | 76/107 [10:21<04:26,  8.58s/it]I0531 17:54:17.285269 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/313_P
+I0531 17:54:17.285660 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/313_P/313_TRANSCRIPT.csv
+I0531 17:54:17.289064 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/313_P/313_TRANSCRIPT.csv with shape (194, 4)
+I0531 17:54:17.290185 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (114, 4)
+ 72%|███████▏  | 77/107 [10:26<03:45,  7.51s/it]I0531 17:54:22.274244 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/474_P
+I0531 17:54:22.274576 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/474_P/474_TRANSCRIPT.csv
+I0531 17:54:22.278025 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/474_P/474_TRANSCRIPT.csv with shape (285, 4)
+I0531 17:54:22.279143 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (202, 4)
+ 73%|███████▎  | 78/107 [10:35<03:54,  8.07s/it]I0531 17:54:31.666956 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/391_P
+I0531 17:54:31.667308 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/391_P/391_TRANSCRIPT.csv
+I0531 17:54:31.670901 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/391_P/391_TRANSCRIPT.csv with shape (195, 4)
+I0531 17:54:31.672032 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (119, 4)
+ 74%|███████▍  | 79/107 [10:41<03:25,  7.34s/it]I0531 17:54:37.283450 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/383_P
+I0531 17:54:37.283987 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/383_P/383_TRANSCRIPT.csv
+I0531 17:54:37.287230 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/383_P/383_TRANSCRIPT.csv with shape (304, 4)
+I0531 17:54:37.288316 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (224, 4)
+ 75%|███████▍  | 80/107 [10:52<03:46,  8.39s/it]I0531 17:54:48.127270 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/427_P
+I0531 17:54:48.127705 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/427_P/427_TRANSCRIPT.csv
+I0531 17:54:48.131723 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/427_P/427_TRANSCRIPT.csv with shape (290, 4)
+I0531 17:54:48.132967 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (211, 4)
+ 76%|███████▌  | 81/107 [11:02<03:52,  8.93s/it]I0531 17:54:58.326085 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/444_P
+I0531 17:54:58.326390 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/444_P/444_TRANSCRIPT.csv
+I0531 17:54:58.329046 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/444_P/444_TRANSCRIPT.csv with shape (423, 4)
+I0531 17:54:58.329806 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (351, 4)
+ 77%|███████▋  | 82/107 [11:20<04:49, 11.60s/it]I0531 17:55:16.144742 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/447_P
+I0531 17:55:16.144953 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/447_P/447_TRANSCRIPT.csv
+I0531 17:55:16.147573 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/447_P/447_TRANSCRIPT.csv with shape (195, 4)
+I0531 17:55:16.148316 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (127, 4)
+ 78%|███████▊  | 83/107 [11:25<03:55,  9.80s/it]I0531 17:55:21.747831 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/356_P
+I0531 17:55:21.748167 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/356_P/356_TRANSCRIPT.csv
+I0531 17:55:21.751616 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/356_P/356_TRANSCRIPT.csv with shape (249, 4)
+I0531 17:55:21.752690 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (165, 4)
+ 79%|███████▊  | 84/107 [11:33<03:32,  9.24s/it]I0531 17:55:29.690557 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/315_P
+I0531 17:55:29.690833 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/315_P/315_TRANSCRIPT.csv
+I0531 17:55:29.693830 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/315_P/315_TRANSCRIPT.csv with shape (224, 4)
+I0531 17:55:29.694842 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (135, 4)
+ 79%|███████▉  | 85/107 [11:40<03:04,  8.38s/it]I0531 17:55:36.063465 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/341_P
+I0531 17:55:36.063760 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/341_P/341_TRANSCRIPT.csv
+I0531 17:55:36.066991 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/341_P/341_TRANSCRIPT.csv with shape (276, 4)
+I0531 17:55:36.068054 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (165, 4)
+ 80%|████████  | 86/107 [11:48<02:56,  8.41s/it]I0531 17:55:44.531046 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/441_P
+I0531 17:55:44.531321 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/441_P/441_TRANSCRIPT.csv
+I0531 17:55:44.533881 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/441_P/441_TRANSCRIPT.csv with shape (267, 4)
+I0531 17:55:44.534636 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (174, 4)
+ 81%|████████▏ | 87/107 [11:56<02:44,  8.24s/it]I0531 17:55:52.392333 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/402_P
+I0531 17:55:52.392540 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/402_P/402_TRANSCRIPT.csv
+I0531 17:55:52.394619 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/402_P/402_TRANSCRIPT.csv with shape (220, 4)
+I0531 17:55:52.395245 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (159, 4)
+E0531 17:55:52.417917 140198850742080 main.py:93] Error processing /home/ucloud/CCS/DATASET/train/402_P/402_TRANSCRIPT.csv: Input is not valid. Should be a string, a list/tuple of strings or a list/tuple of integers.
+I0531 17:55:52.418012 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/360_P
+I0531 17:55:52.418083 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/360_P/360_TRANSCRIPT.csv
+I0531 17:55:52.419173 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/360_P/360_TRANSCRIPT.csv with shape (83, 4)
+I0531 17:55:52.419592 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (42, 4)
+ 83%|████████▎ | 89/107 [11:58<01:27,  4.85s/it]I0531 17:55:54.153704 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/375_P
+I0531 17:55:54.154088 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/375_P/375_TRANSCRIPT.csv
+I0531 17:55:54.157606 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/375_P/375_TRANSCRIPT.csv with shape (152, 4)
+I0531 17:55:54.158857 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (84, 4)
+ 84%|████████▍ | 90/107 [12:01<01:16,  4.51s/it]I0531 17:55:57.651658 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/328_P
+I0531 17:55:57.651913 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/328_P/328_TRANSCRIPT.csv
+I0531 17:55:57.654336 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/328_P/328_TRANSCRIPT.csv with shape (238, 4)
+I0531 17:55:57.655070 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (137, 4)
+ 85%|████████▌ | 91/107 [12:07<01:18,  4.91s/it]I0531 17:56:03.681727 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/326_P
+I0531 17:56:03.682000 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/326_P/326_TRANSCRIPT.csv
+I0531 17:56:03.684430 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/326_P/326_TRANSCRIPT.csv with shape (198, 4)
+I0531 17:56:03.685178 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (99, 4)
+ 86%|████████▌ | 92/107 [12:12<01:12,  4.84s/it]I0531 17:56:08.333239 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/374_P
+I0531 17:56:08.333472 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/374_P/374_TRANSCRIPT.csv
+I0531 17:56:08.335752 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/374_P/374_TRANSCRIPT.csv with shape (337, 4)
+I0531 17:56:08.336437 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (268, 4)
+ 87%|████████▋ | 93/107 [12:24<01:37,  6.95s/it]I0531 17:56:20.712647 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/471_P
+I0531 17:56:20.712924 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/471_P/471_TRANSCRIPT.csv
+I0531 17:56:20.716057 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/471_P/471_TRANSCRIPT.csv with shape (220, 4)
+I0531 17:56:20.717108 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (151, 4)
+ 88%|████████▊ | 94/107 [12:32<01:31,  7.05s/it]I0531 17:56:28.032220 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/428_P
+I0531 17:56:28.032573 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/428_P/428_TRANSCRIPT.csv
+I0531 17:56:28.036108 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/428_P/428_TRANSCRIPT.csv with shape (215, 4)
+I0531 17:56:28.037262 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (130, 4)
+ 89%|████████▉ | 95/107 [12:38<01:21,  6.81s/it]I0531 17:56:34.229214 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/412_P
+I0531 17:56:34.229586 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/412_P/412_TRANSCRIPT.csv
+I0531 17:56:34.233105 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/412_P/412_TRANSCRIPT.csv with shape (224, 4)
+I0531 17:56:34.234207 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (142, 4)
+ 90%|████████▉ | 96/107 [12:44<01:13,  6.70s/it]I0531 17:56:40.681458 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/379_P
+I0531 17:56:40.681833 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/379_P/379_TRANSCRIPT.csv
+I0531 17:56:40.684964 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/379_P/379_TRANSCRIPT.csv with shape (328, 4)
+I0531 17:56:40.685846 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (225, 4)
+ 91%|█████████ | 97/107 [12:55<01:17,  7.78s/it]I0531 17:56:51.022565 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/348_P
+I0531 17:56:51.022953 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/348_P/348_TRANSCRIPT.csv
+I0531 17:56:51.027031 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/348_P/348_TRANSCRIPT.csv with shape (206, 4)
+I0531 17:56:51.028188 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (111, 4)
+ 92%|█████████▏| 98/107 [13:00<01:03,  7.05s/it]I0531 17:56:56.338304 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/415_P
+I0531 17:56:56.338979 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/415_P/415_TRANSCRIPT.csv
+I0531 17:56:56.342429 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/415_P/415_TRANSCRIPT.csv with shape (211, 4)
+I0531 17:56:56.343513 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (136, 4)
+ 93%|█████████▎| 99/107 [13:07<00:55,  6.89s/it]I0531 17:57:02.851034 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/305_P
+I0531 17:57:02.851304 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/305_P/305_TRANSCRIPT.csv
+I0531 17:57:02.853870 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/305_P/305_TRANSCRIPT.csv with shape (405, 4)
+I0531 17:57:02.854628 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (288, 4)
+ 93%|█████████▎| 100/107 [13:20<01:01,  8.86s/it]I0531 17:57:16.338263 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/357_P
+I0531 17:57:16.338645 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/357_P/357_TRANSCRIPT.csv
+I0531 17:57:16.341946 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/357_P/357_TRANSCRIPT.csv with shape (126, 4)
+I0531 17:57:16.343058 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (87, 4)
+ 94%|█████████▍| 101/107 [13:24<00:44,  7.44s/it]I0531 17:57:20.449976 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/344_P
+I0531 17:57:20.450222 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/344_P/344_TRANSCRIPT.csv
+I0531 17:57:20.452956 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/344_P/344_TRANSCRIPT.csv with shape (281, 4)
+I0531 17:57:20.453883 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (169, 4)
+ 95%|█████████▌| 102/107 [13:32<00:37,  7.60s/it]I0531 17:57:28.424667 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/423_P
+I0531 17:57:28.425047 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/423_P/423_TRANSCRIPT.csv
+I0531 17:57:28.428645 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/423_P/423_TRANSCRIPT.csv with shape (258, 4)
+I0531 17:57:28.429793 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (177, 4)
+ 96%|█████████▋| 103/107 [13:41<00:31,  7.94s/it]I0531 17:57:37.160253 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/350_P
+I0531 17:57:37.160524 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/350_P/350_TRANSCRIPT.csv
+I0531 17:57:37.163570 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/350_P/350_TRANSCRIPT.csv with shape (212, 4)
+I0531 17:57:37.164553 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (125, 4)
+ 97%|█████████▋| 104/107 [13:47<00:22,  7.35s/it]I0531 17:57:43.131533 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/304_P
+I0531 17:57:43.131856 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/304_P/304_TRANSCRIPT.csv
+I0531 17:57:43.135171 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/304_P/304_TRANSCRIPT.csv with shape (204, 4)
+I0531 17:57:43.136198 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (104, 4)
+ 98%|█████████▊| 105/107 [13:51<00:13,  6.52s/it]I0531 17:57:47.727926 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/445_P
+I0531 17:57:47.728219 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/445_P/445_TRANSCRIPT.csv
+I0531 17:57:47.731309 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/445_P/445_TRANSCRIPT.csv with shape (178, 4)
+I0531 17:57:47.732301 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (108, 4)
+ 99%|█████████▉| 106/107 [13:56<00:06,  6.05s/it]I0531 17:57:52.667466 140198850742080 main.py:77] Checking folder: /home/ucloud/CCS/DATASET/train/347_P
+I0531 17:57:52.667860 140198850742080 main.py:80] Looking for transcript file: /home/ucloud/CCS/DATASET/train/347_P/347_TRANSCRIPT.csv
+I0531 17:57:52.669926 140198850742080 main.py:45] Loaded data from /home/ucloud/CCS/DATASET/train/347_P/347_TRANSCRIPT.csv with shape (149, 4)
+I0531 17:57:52.670647 140198850742080 main.py:47] Cleaned data shape (only 'Participant' speaker): (58, 4)
+100%|██████████| 107/107 [13:59<00:00,  4.95s/it]100%|██████████| 107/107 [13:59<00:00,  7.84s/it]
+I0531 17:57:55.214199 140198850742080 main.py:100] Features saved to /home/ucloud/CCS/code/DistillBert/train_features.npy
